@@ -1,0 +1,12 @@
+{
+  "date": "2025.01.01",
+  "fortune": "오늘은 조금 느리게 가도 괜찮은 하루야.\n괜히 서두르지 않아도 돼.",
+
+  "music": {
+    "title": "밤편지",
+    "artist": "아이유",
+    "lyrics": "이 밤 그날의 반딧불을\n당신의 창 가까이 보낼게요",
+    "youtube": "https://www.youtube.com/watch?v=BzYnNdJhZQw",
+    "image": "album.jpg"
+  }
+}
