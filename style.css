@@ -74,10 +74,10 @@ body {
 /* 이어폰 이미지 */
 .earphone {
   position: fixed;
-  top: 35%;
-  right: -40px;
-  height: 70vh;
+  top: 22%;
+  right: -30px;
+  height: 85vh;
   z-index: 10;
   pointer-events: none;
-  transform: rotate(-8deg);
+  transform: rotate(-6deg);
 }
