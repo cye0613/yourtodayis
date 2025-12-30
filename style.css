@@ -32,8 +32,10 @@ body {
 /* 이어폰 */
 .earphone {
   position: absolute;
-  width: 60vw;
-  height: 80vh;
+  .earphone {
+  width: 80vw;    /* ⬅️ 다시 크게 */
+  height: 90vh;   /* ⬅️ 다시 크게 */
+}
   background-image: url('./earphone.PNG');
   background-repeat: no-repeat;
   background-size: contain;
