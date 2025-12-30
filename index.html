@@ -2,46 +2,38 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=no"
+  >
   <title>Today</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <section class="page fortune active">
-  <div class="earphone earphone-left"></div>
+  <div class="earphone"></div>
 
   <div class="content">
-    <div class="date" id="date1"></div>
+    <div class="date" id="fortune-date"></div>
     <h1>Today’s Fortune</h1>
-
-    <p class="body-text fortune-text">
-      오늘은 괜히 마음이 조금 느슨해지는 날.<br>
-      너무 애쓰지 말고 네 속도대로 가도 괜찮아.
-    </p>
+    <p class="body-text" id="fortune-text"></p>
   </div>
 </section>
 
 <section class="page music">
-  <div class="earphone earphone-right"></div>
+  <div class="earphone"></div>
 
   <div class="content">
-    <div class="date" id="date2"></div>
+    <div class="date" id="music-date"></div>
     <h1>Today’s Music</h1>
 
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-      <img
-        class="thumb"
-        src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg"
-      />
+    <a id="music-link" target="_blank">
+      <img id="music-thumb" class="thumb">
     </a>
 
-    <div class="song-info">Never Gonna Give You Up – Rick Astley</div>
-
-    <p class="body-text music-text">
-      “Never gonna give you up<br>
-      Never gonna let you down”
-    </p>
+    <div class="song-info" id="song-info"></div>
+    <p class="body-text music-text" id="lyrics"></p>
   </div>
 </section>
 
