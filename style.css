@@ -1,126 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont;
-  background: #ffffff;
+  background: #fff;
   color: #000;
-}
-
-.page {
   overflow: hidden;
 }
 
-/* 페이지 기본 */
+/* 페이지 */
 .page {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  inset: 0;
   padding: 24px;
-  box-sizing: border-box;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.4s ease;
   background: #fff;
+  overflow: hidden;
+  transform: translateX(100%);
+  transition: transform 0.4s ease;
 }
 
 .page.active {
-  opacity: 1;
-  pointer-events: auto;
+  transform: translateX(0);
+}
+
+.page.fortune {
+  z-index: 1;
+}
+
+.page.music {
+  z-index: 0;
+}
+
+/* 이어폰 (세로 기준 5:5 분할) */
+.earphone {
+  position: absolute;
+  top: 22%;
+  right: 0;
+  width: 50vw;
+  height: 80vh;
+
+  background-image: url('earphone.png');
+  background-repeat: no-repeat;
+  background-size: 200% 100%;
+  background-position-y: center;
+
+  z-index: 1;
+  pointer-events: none;
+}
+
+.earphone-left {
+  background-position-x: left;
+}
+
+.earphone-right {
+  background-position-x: right;
 }
 
 /* 콘텐츠 */
 .content {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-/* 상단 */
-.header {
-  margin-top: 40px;
+  position: relative;
+  z-index: 5;
 }
 
 .date {
-  font-size: 34px;
   font-weight: 700;
-  margin-bottom: 4px;
+  font-size: 14px;
+  margin-bottom: 6px;
 }
 
-.title {
-  font-size: 22px;
-  font-weight: 600;
+h1 {
+  font-size: 26px;
+  font-weight: 800;
+  margin: 0 0 20px 0;
 }
 
-/* 본문 */
 .body-text {
-  margin-top: l4vh;
-  font-size: 15px;
-  line-height: 1.7;
-  white-space: pre-line;
-}
-
-/* Music 본문은 조금 더 위 */
-.music-text {
-  margin-top: 6vh;
-}
-
-/* 유튜브 썸네일 (기존의 1/4 느낌) */
-#youtube-thumb {
-  width: 140px;
-  height: 140px;
-  object-fit: cover;
-  display: block;
-  margin: 32px auto 16px;
-  border-radius: 6px;
-}
-
-/* 노래 정보 */
-.song-info {
-  text-align: center;
+  margin-top: 13vh;
   font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 8px;
+  line-height: 1.6;
 }
 
-/* 이어폰 */
-.earphone {
-  position: fixed;
-  top: 24%;
-  right: -30px;
-  height: 80vh;
-  z-index: 10;
-  pointer-events: none;
-  transform: rotate(-6deg);
+.thumb {
+  width: 45%;
+  max-width: 160px;
+  margin-top: 10px;
 }
 
-.earphone-wrap {
-  position: absolute;
-  top: 22%;
-  right: -30px;
-  width: 50vw;
-  height: 80vh;
-  overflow: hidden;
-  z-index: 1; /* 텍스트보다 아래 */
-  pointer-events: none;
-}
-
-.earphone-wrap.left .earphone-img {
-  position: absolute;
-  right: 0;
-}
-
-.earphone-wrap.right .earphone-img {
-  position: absolute;
-  left: 0;
-}
-
-.earphone-img {
-  height: 80vh;
-  transform: rotate(-6deg);
-}
-
-.content {
-  position: relative;
-  z-index: 5;
+.song-info {
+  margin-top: 12px;
+  font-weight: 700;
 }
