@@ -5,6 +5,10 @@ body {
   color: #000;
 }
 
+.page {
+  overflow: hidden;
+}
+
 /* 페이지 기본 */
 .page {
   position: fixed;
@@ -88,4 +92,15 @@ body {
   z-index: 10;
   pointer-events: none;
   transform: rotate(-6deg);
+}
+
+.earphone-wrap {
+  position: absolute;
+  top: 22%;
+  right: -30px;
+  width: 50vw;
+  height: 80vh;
+  overflow: hidden;
+  z-index: 1; /* 텍스트보다 아래 */
+  pointer-events: none;
 }
