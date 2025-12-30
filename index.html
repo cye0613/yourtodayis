@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Today</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 이어폰 이미지 -->
+<img src="earphone.PNG" class="earphone" />
+
+<div class="container" id="container">
+
+  <!-- Fortune -->
+  <section class="page fortune">
+    <div class="content">
+      <div class="header">
+        <div class="date" id="fortune-date"></div>
+        <div class="title">Today’s Fortune</div>
+      </div>
+
+      <div class="body-text" id="fortune-text"></div>
+    </div>
+  </section>
+
+  <!-- Music -->
+  <section class="page music">
+    <div class="content">
+      <div class="header">
+        <div class="date" id="music-date"></div>
+        <div class="title">Today’s Music</div>
+      </div>
+
+      <a id="music-link" target="_blank">
+        <img id="youtube-thumb" />
+      </a>
+
+      <div class="song-info" id="song-info"></div>
+      <div class="body-text" id="lyrics"></div>
+    </div>
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
