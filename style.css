@@ -45,8 +45,9 @@ body {
 
 /* 본문 */
 .body-text {
-  margin-top: auto;
-  margin-bottom: 30vh;
+  margin-top: 12vh;
+  margin-bottom: 0;
+}
   font-size: 15px;
   line-height: 1.7;
   white-space: pre-line;
