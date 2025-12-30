@@ -1,51 +1,47 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta 
-    name="viewport" 
-    content="width=device-width, initial-scale=1.0"
-  />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>Today</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- 고정 이어폰 -->
-<img src="earphone.PNG" class="earphone" />
+<section class="page fortune active">
+  <div class="earphone earphone-left"></div>
 
-<!-- Fortune -->
-<section class="page fortune active" id="fortune">
-  <div class="earphone-wrap right">
-  <img src="earphone.PNG" class="earphone-img">
-</div>
   <div class="content">
-    <div class="header">
-      <div class="date" id="fortune-date"></div>
-      <div class="title">Today’s Fortune</div>
-    </div>
+    <div class="date" id="date1"></div>
+    <h1>Today’s Fortune</h1>
 
-    <div class="body-text" id="fortune-text"></div>
+    <p class="body-text fortune-text">
+      오늘은 괜히 마음이 조금 느슨해지는 날.<br>
+      너무 애쓰지 말고 네 속도대로 가도 괜찮아.
+    </p>
   </div>
 </section>
 
-<!-- Music -->
-<section class="page music" id="music">
-  <div class="earphone-wrap right">
-  <img src="earphone.PNG" class="earphone-img">
-</div>
-  <div class="content">
-    <div class="header">
-      <div class="date" id="music-date"></div>
-      <div class="title">Today’s Music</div>
-    </div>
+<section class="page music">
+  <div class="earphone earphone-right"></div>
 
-    <a id="music-link" target="_blank">
-      <img id="youtube-thumb" />
+  <div class="content">
+    <div class="date" id="date2"></div>
+    <h1>Today’s Music</h1>
+
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+      <img
+        class="thumb"
+        src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg"
+      />
     </a>
 
-    <div class="song-info" id="song-info"></div>
-    <div class="body-text music-text" id="lyrics"></div>
+    <div class="song-info">Never Gonna Give You Up – Rick Astley</div>
+
+    <p class="body-text music-text">
+      “Never gonna give you up<br>
+      Never gonna let you down”
+    </p>
   </div>
 </section>
 
