@@ -1,5 +1,7 @@
-const container = document.getElementById('container');
-let page = 0;
+const fortunePage = document.getElementById('fortune');
+const musicPage = document.getElementById('music');
+
+let current = 'fortune';
 
 fetch('content.json')
   .then(res => res.json())
@@ -23,8 +25,15 @@ fetch('content.json')
   });
 
 document.addEventListener('click', () => {
-  page = page === 0 ? 1 : 0;
-  container.style.transform = `translateX(-${page * 100}vw)`;
+  if (current === 'fortune') {
+    fortunePage.classList.remove('active');
+    musicPage.classList.add('active');
+    current = 'music';
+  } else {
+    musicPage.classList.remove('active');
+    fortunePage.classList.add('active');
+    current = 'fortune';
+  }
 });
 
 function extractYouTubeID(url) {
@@ -32,25 +41,3 @@ function extractYouTubeID(url) {
   const match = url.match(reg);
   return match ? match[1] : '';
 }
-
-// iOS pinch zoom 완전 차단
-document.addEventListener('gesturestart', function (e) {
-  e.preventDefault();
-});
-
-document.addEventListener('gesturechange', function (e) {
-  e.preventDefault();
-});
-
-document.addEventListener('gestureend', function (e) {
-  e.preventDefault();
-});
-
-let lastTouchEnd = 0;
-document.addEventListener('touchend', function (event) {
-  const now = Date.now();
-  if (now - lastTouchEnd <= 300) {
-    event.preventDefault();
-  }
-  lastTouchEnd = now;
-}, false);
