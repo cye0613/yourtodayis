@@ -1,39 +1,33 @@
-html, body {
-  overscroll-behavior: none;
-  touch-action: manipulation;
-  -webkit-text-size-adjust: 100%;
-}
-body {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-}
-
 body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont;
   background: #ffffff;
   color: #000;
-  overflow-x: hidden;
 }
 
-/* 슬라이드 컨테이너 */
-.container {
-  display: flex;
-  width: 200vw;
-  transition: transform 0.45s ease;
-}
-
-/* 각 페이지 */
+/* 페이지 기본 */
 .page {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
+  height: 100vh;
   padding: 24px;
   box-sizing: border-box;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  background: #fff;
 }
 
-/* 콘텐츠 레이아웃 */
+.page.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* 콘텐츠 */
 .content {
-  min-height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -56,39 +50,41 @@ body {
 
 /* 본문 */
 .body-text {
-  margin-top: 12vh;
-  margin-bottom: 0;
-}
+  margin-top: 20vh;
   font-size: 15px;
   line-height: 1.7;
   white-space: pre-line;
 }
 
-/* 유튜브 썸네일 */
+/* Music 본문은 조금 더 위 */
+.music-text {
+  margin-top: 6vh;
+}
+
+/* 유튜브 썸네일 (기존의 1/4 느낌) */
 #youtube-thumb {
-  width: 100%;
-  max-width: 280px;
-  aspect-ratio: 1 / 1;
+  width: 140px;
+  height: 140px;
   object-fit: cover;
   display: block;
-  margin: 40px auto 20px;
+  margin: 32px auto 16px;
   border-radius: 6px;
 }
 
 /* 노래 정보 */
 .song-info {
   text-align: center;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 600;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
-/* 이어폰 이미지 */
+/* 이어폰 */
 .earphone {
   position: fixed;
-  top: 22%;
+  top: 24%;
   right: -30px;
-  height: 85vh;
+  height: 80vh;
   z-index: 10;
   pointer-events: none;
   transform: rotate(-6deg);
